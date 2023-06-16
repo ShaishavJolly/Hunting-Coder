@@ -40,12 +40,12 @@ const Blogpost = (props) => {
 // Static Site Generation
 
 export async function getStaticPaths(){
+  let allb = await fs.promises.readdir('blogdata');
+  allb = allb.map((item)=>{
+    return {params: {slug: item.split(".")[0]}}
+  })
   return {
-    paths: [
-      {params: {slug: "How-to-learn-CSS"}},
-      {params: {slug: "How-to-learn-HTML"}},
-      {params: {slug: "How-to-learn-Javascript"}}
-    ],
+    paths: allb,
     fallback: true
   };
 }
