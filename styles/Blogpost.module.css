@@ -1,0 +1,24 @@
+.container{
+    max-width: 70vw;
+    margin:  50px auto;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2rem;
+}
+.main h1{
+    margin-bottom: 1rem;
+}
+.main p{
+    font-size: 1.2rem;
+    margin: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+    .container{
+        max-width: 90vw;
+    }
+    .main h1{
+        font-size: 2rem;
+        text-align: center;
+    }
+  }
